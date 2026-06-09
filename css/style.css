@@ -1,7 +1,7 @@
 /* ============================================
-   LA LUNA ITALIAN CUISINE - PREMIUM STYLESHEET
+   LA LUNA ITALIAN CUISINE - COMPLETE STYLESHEET
    Industrial Grade | Italian Luxury Theme
-   Custom Cursor | Smooth Animations | Gold Accents
+   Clean Category Buttons | Elegant Card Style
    ============================================ */
 
 :root {
@@ -13,14 +13,12 @@
     --gold: #D4A34B;
     --gold-light: #F0C674;
     --gold-dark: #B8860B;
-    --red: #8B0000;
     --text-dark: #1A1A1A;
     --text-light: #666666;
     --shadow: 0 4px 20px rgba(0,0,0,0.08);
     --shadow-hover: 0 12px 35px rgba(0,0,0,0.15);
     --shadow-gold: 0 8px 25px rgba(212,163,75,0.2);
     --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-smooth: all 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 * {
@@ -35,26 +33,6 @@ body {
     color: var(--text-dark);
     line-height: 1.5;
     overflow-x: hidden;
-    cursor: none;
-}
-
-/* ========== CUSTOM CURSOR GLOW ========== */
-.cursor-glow {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(212,163,75,0.4) 0%, rgba(212,163,75,0) 70%);
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-}
-
-a:hover ~ .cursor-glow,
-button:hover ~ .cursor-glow {
-    width: 60px;
-    height: 60px;
 }
 
 .container {
@@ -316,9 +294,9 @@ h1, h2, h3, .logo h1 {
     overflow: hidden;
 }
 
-.hero-small {
+.hero-menu {
     position: relative;
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,6 +325,16 @@ h1, h2, h3, .logo h1 {
     z-index: 1;
 }
 
+.hero-overlay-brighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -354,19 +342,11 @@ h1, h2, h3, .logo h1 {
     max-width: 800px;
 }
 
-.hero-content-small {
+.hero-content-menu {
     position: relative;
     z-index: 2;
     color: white;
-    max-width: 800px;
     text-align: center;
-}
-
-.hero-subtitle {
-    font-size: 1rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
 }
 
 .hero-content h1 {
@@ -385,9 +365,14 @@ h1, h2, h3, .logo h1 {
     opacity: 0.9;
 }
 
-.hero-small h1 {
+.hero-content-menu h1 {
     font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.hero-content-menu p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 .hero-buttons {
@@ -423,26 +408,38 @@ h1, h2, h3, .logo h1 {
     box-shadow: 0 10px 25px rgba(212,163,75,0.3);
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-    font-size: 0.8rem;
-    animation: bounce 2s infinite;
+/* ========== CATEGORY BUTTONS - CLEAN LIKE REFERENCE ========== */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
-.scroll-indicator i {
-    display: block;
-    margin-top: 5px;
+.cat-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 40px;
+    position: relative;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
+.cat-btn:hover {
+    color: var(--gold);
+    background: rgba(212,163,75,0.1);
+}
+
+.cat-btn.active {
+    color: var(--gold);
+    background: rgba(212,163,75,0.15);
+    font-weight: 600;
 }
 
 /* ========== FEATURES SECTION ========== */
@@ -606,99 +603,55 @@ h1, h2, h3, .logo h1 {
     box-shadow: var(--shadow-gold);
 }
 
-/* ========== MENU PAGE STYLES ========== */
-.menu-category-nav {
+/* ========== MENU ITEM CARDS - CLEAN LIKE REFERENCE ========== */
+.menu-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 40px 0;
-}
-
-.menu-cat-btn {
-    padding: 10px 20px;
-    background: var(--light-gray);
-    border: none;
-    border-radius: 40px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    color: var(--text-dark);
-}
-
-.menu-cat-btn:hover,
-.menu-cat-btn.active {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: var(--black);
-    transform: translateY(-2px);
-}
-
-.menu-sections {
-    margin: 40px 0;
-}
-
-.menu-category {
-    margin-bottom: 50px;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    border: 1px solid #EEE;
-}
-
-.menu-category-header {
-    background: linear-gradient(135deg, #1A1A1A, #2A2A2A);
-    padding: 18px 25px;
-    display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 12px;
+    margin: 30px 0;
 }
 
-.menu-category-header i {
-    font-size: 1.6rem;
-    color: var(--gold);
-}
-
-.menu-category-header h2 {
-    color: white;
-    font-size: 1.4rem;
-    margin: 0;
-}
-
-.menu-items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 8px;
-    padding: 20px;
-}
-
-.menu-item {
+.menu-item-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid #F0F0F0;
-    transition: var(--transition);
+    padding: 16px 20px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #F0F0F0;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.menu-item:hover {
-    background: #FFF8F0;
+.menu-item-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transform: translateX(5px);
 }
 
-.menu-item span:first-child {
-    font-weight: 500;
+.menu-item-info {
+    flex: 1;
+}
+
+.menu-item-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
     color: var(--text-dark);
 }
 
-.menu-item span:last-child {
+.menu-item-info p {
+    font-size: 0.8rem;
+    color: #999;
+    margin: 0;
+}
+
+.menu-item-price {
     font-weight: 700;
     color: var(--gold);
-    background: #F5F5F5;
-    padding: 4px 12px;
-    border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding-left: 15px;
 }
 
 /* ========== PAYMENT PLACEHOLDER ========== */
@@ -981,6 +934,7 @@ button:hover {
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     transition: var(--transition);
     z-index: 1000;
+    animation: pulse 2s infinite;
 }
 
 .whatsapp-float:hover {
@@ -1006,6 +960,12 @@ button:hover {
     opacity: 1;
     visibility: visible;
     right: 75px;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 /* ========== TOAST NOTIFICATION ========== */
@@ -1079,13 +1039,6 @@ button:hover {
     .payment-row {
         grid-template-columns: 1fr;
     }
-    .menu-cat-btn {
-        padding: 6px 14px;
-        font-size: 0.7rem;
-    }
-    .menu-items-grid {
-        grid-template-columns: 1fr;
-    }
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -1096,11 +1049,40 @@ button:hover {
     .section-title {
         font-size: 1.8rem;
     }
-    body {
-        cursor: auto;
+    
+    /* Mobile Category Buttons */
+    .category-list {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 15px;
+        gap: 6px;
     }
-    .cursor-glow {
-        display: none;
+    .cat-btn {
+        padding: 6px 16px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    /* Mobile Menu Items */
+    .menu-item-card {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+    }
+    .menu-item-info h3 {
+        font-size: 0.95rem;
+    }
+    .menu-item-info p {
+        font-size: 0.7rem;
+    }
+    .menu-item-price {
+        font-size: 0.9rem;
+    }
+    .hero-menu {
+        min-height: 280px;
+    }
+    .hero-content-menu h1 {
+        font-size: 2rem;
     }
 }
 
@@ -1110,9 +1092,6 @@ button:hover {
     }
     .hero-content p {
         font-size: 0.9rem;
-    }
-    .hero-small h1 {
-        font-size: 2rem;
     }
     .payment-icons {
         gap: 10px;
@@ -1127,5 +1106,8 @@ button:hover {
         font-size: 25px;
         bottom: 20px;
         right: 20px;
+    }
+    .hero-content-menu h1 {
+        font-size: 1.6rem;
     }
 }
