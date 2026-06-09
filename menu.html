@@ -51,14 +51,14 @@
         @media (max-width: 768px) { .nav-links { display: none !important; } .mobile-menu-btn { display: block !important; } }
         @media (min-width: 769px) { .mobile-menu-btn { display: none !important; } .mobile-nav-panel, .mobile-overlay { display: none !important; } }
 
+        /* HERO - No green overlay, pure image */
         .menu-page-hero {
-            background: linear-gradient(135deg, rgba(0,146,70,0.85) 0%, rgba(0,122,58,0.7) 100%),
-                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80') center/cover no-repeat;
-            padding: 80px 20px 60px; text-align: center; position: relative;
+            background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80') center/cover no-repeat;
+            padding: 100px 20px 80px; text-align: center; position: relative;
         }
-        .menu-page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 80px; background: linear-gradient(0deg, var(--green-bg) 0%, transparent 100%); z-index: 1; }
-        .menu-page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #fff; position: relative; z-index: 2; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-        .menu-page-hero p { color: rgba(255,255,255,0.9); position: relative; z-index: 2; font-size: 1.1rem; }
+        .menu-page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; background: linear-gradient(0deg, var(--green-bg) 0%, transparent 100%); z-index: 1; }
+        .menu-page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #fff; position: relative; z-index: 2; text-shadow: 0 4px 20px rgba(0,0,0,0.7); }
+        .menu-page-hero p { color: #fff; position: relative; z-index: 2; font-size: 1.1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.7); }
 
         .menu-category-nav { background: #fff; padding: 12px 8px; position: sticky; top: 70px; z-index: 99; border-bottom: 2px solid #e0f0e3; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; box-shadow: 0 2px 10px rgba(0,146,70,0.05); }
         .menu-cat-btn { display: inline-block; padding: 8px 16px; border: 2px solid var(--green); background: transparent; color: var(--green); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; border-radius: 25px; transition: var(--transition); white-space: nowrap; flex-shrink: 0; }
@@ -114,7 +114,7 @@
 <div class="topbar">
     <div><i class="fas fa-clock"></i> Open Daily: <span>7:00 AM - 11:00 PM</span></div>
     <div><i class="fas fa-map-marker-alt"></i> <span>Addis Ababa, Ethiopia</span></div>
-    <div><i class="fas fa-phone"></i> <span>+251 952 253 333</span></div>
+    <div><i class="fas fa-phone"></i> <span>091234567</span></div>
 </div>
 
 <header class="nav-bar">
@@ -159,7 +159,7 @@
     <section style="padding: 40px 0 60px; text-align: center;">
         <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--green);margin-bottom:30px;">Payment Methods</h2>
         <div class="payment-grid">
-            <div class="payment-card"><i class="fas fa-mobile-alt"></i><h4>Telebirr</h4><div class="payment-detail">09XX XXX XXX</div></div>
+            <div class="payment-card"><i class="fas fa-mobile-alt"></i><h4>Telebirr</h4><div class="payment-detail">091234567</div></div>
             <div class="payment-card"><i class="fas fa-university"></i><h4>Awash Bank</h4><div class="payment-detail">013041709689600</div></div>
             <div class="payment-card"><i class="fas fa-cash-register"></i><h4>Cash</h4><div class="payment-detail">Available</div></div>
         </div>
@@ -182,12 +182,12 @@
     <div class="footer-grid">
         <div class="footer-col"><h4>La Luna Italian Cuisine</h4><p>Premium Italian dining with Ethiopian favorites.</p></div>
         <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p><p><i class="fas fa-phone"></i> +251 952 253 333</p></div>
+        <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p><p><i class="fas fa-phone"></i> 091234567</p></div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 La Luna Italian Cuisine. All rights reserved.</p></div>
 </footer>
 
-<a href="https://wa.me/251952253333" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/091234567" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <script>
     const laLunaMenu = [
