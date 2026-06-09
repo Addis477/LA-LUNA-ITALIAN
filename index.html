@@ -2,204 +2,312 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="LA LUNA - Authentic Italian Cuisine in Addis Ababa. Premium pasta, pizza, seafood, and traditional Italian dishes.">
-    <meta name="theme-color" content="#1A1A1A">
-    <title>LA LUNA | Authentic Italian Cuisine | Premium Restaurant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Menu | La Luna Italian Cuisine | Addis Ababa</title>
+    <meta name="description" content="Explore La Luna's full menu - Pastry, Torta, National Corner, Fish, Poultry, Beef, Pizza, Pasta, Breakfast, Coffee and more. 130+ items.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --green: #009246; --green-dark: #007A3A; --green-light: #2EBD5E;
+            --green-bg: #F0F7F1; --green-card: #FFFFFF; --green-surface: #E8F3EA;
+            --gold: #C9A96E; --gold-dark: #B8933F;
+            --white: #FFFFFF; --gray: #5A6B5E; --gray-light: #7D8F80; --text-dark: #1a2e1d;
+            --radius-sm: 8px; --radius: 16px; --radius-lg: 24px;
+            --shadow: 0 4px 20px rgba(0,146,70,0.08); --shadow-lg: 0 12px 40px rgba(0,146,70,0.12);
+            --shadow-green: 0 8px 25px rgba(0,146,70,0.2); --shadow-gold: 0 8px 25px rgba(201,169,110,0.25);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--green-bg); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        @keyframes pulse { 0%,100% { box-shadow: 0 6px 25px rgba(46,189,94,0.3); } 50% { box-shadow: 0 8px 35px rgba(46,189,94,0.5); } }
+
+        .topbar { background: var(--green-dark); color: rgba(255,255,255,0.9); text-align: center; padding: 10px 20px; font-size: 0.8rem; font-weight: 500; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .topbar i { color: var(--gold); margin: 0 5px; } .topbar span { color: #fff; font-weight: 600; }
+
+        .nav-bar { background: rgba(255,255,255,0.97); backdrop-filter: blur(25px); border-bottom: 2px solid var(--green); position: sticky; top: 0; z-index: 1000; padding: 0 2rem; box-shadow: 0 2px 15px rgba(0,146,70,0.08); }
+        .nav-inner { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 0; flex-wrap: wrap; gap: 16px; }
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: 2px; color: var(--green); font-family: 'Playfair Display', serif; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid var(--green); box-shadow: var(--shadow-green); transition: var(--transition); }
+        .logo:hover .logo-img { border-color: var(--gold); transform: scale(1.05); }
+        .logo-text span { color: var(--green-light); font-weight: 400; font-size: 0.7rem; letter-spacing: 3px; display: block; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; align-items: center; }
+        .nav-links a { text-decoration: none; font-weight: 500; color: var(--gray); transition: var(--transition); font-size: 0.85rem; position: relative; padding: 6px 0; }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--green); transition: var(--transition); border-radius: 2px; }
+        .nav-links a:hover { color: var(--green); } .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--green); font-weight: 600; } .nav-links a.active::after { width: 100%; }
+        .nav-cta-btn { background: var(--green); color: #fff !important; padding: 10px 22px !important; border-radius: 50px !important; font-weight: 600 !important; box-shadow: var(--shadow-green); }
+        .nav-cta-btn:hover { background: var(--green-dark) !important; transform: translateY(-2px); } .nav-cta-btn::after { display: none !important; }
+        .mobile-menu-btn { display: none; background: var(--green); border: none; color: white; font-size: 1.5rem; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+        .mobile-nav-panel { position: fixed; top: 0; right: -280px; width: 280px; height: 100%; background: #fff; z-index: 10001; transition: right 0.3s ease; padding: 80px 20px 20px; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
+        .mobile-nav-panel.open { right: 0; } .mobile-nav-panel a { display: block; color: var(--text-dark); text-decoration: none; padding: 15px 0; font-size: 1.1rem; border-bottom: 1px solid #e0e0e0; }
+        .mobile-nav-panel a:hover, .mobile-nav-panel a.active { color: var(--green); }
+        .mobile-nav-panel .close-btn { position: absolute; top: 15px; right: 20px; background: none; border: none; color: var(--green); font-size: 1.8rem; cursor: pointer; }
+        .mobile-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; display: none; }
+        .mobile-overlay.show { display: block; }
+        @media (max-width: 768px) { .nav-links { display: none !important; } .mobile-menu-btn { display: block !important; } }
+        @media (min-width: 769px) { .mobile-menu-btn { display: none !important; } .mobile-nav-panel, .mobile-overlay { display: none !important; } }
+
+        .menu-page-hero {
+            background: linear-gradient(135deg, rgba(0,146,70,0.85) 0%, rgba(0,122,58,0.7) 100%),
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80') center/cover no-repeat;
+            padding: 80px 20px 60px; text-align: center; position: relative;
+        }
+        .menu-page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 80px; background: linear-gradient(0deg, var(--green-bg) 0%, transparent 100%); z-index: 1; }
+        .menu-page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #fff; position: relative; z-index: 2; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .menu-page-hero p { color: rgba(255,255,255,0.9); position: relative; z-index: 2; font-size: 1.1rem; }
+
+        .menu-category-nav { background: #fff; padding: 12px 8px; position: sticky; top: 70px; z-index: 99; border-bottom: 2px solid #e0f0e3; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; box-shadow: 0 2px 10px rgba(0,146,70,0.05); }
+        .menu-cat-btn { display: inline-block; padding: 8px 16px; border: 2px solid var(--green); background: transparent; color: var(--green); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; border-radius: 25px; transition: var(--transition); white-space: nowrap; flex-shrink: 0; }
+        .menu-cat-btn:hover, .menu-cat-btn.active { background: var(--green); color: #fff; }
+
+        .menu-container { max-width: 1300px; margin: 0 auto; padding: 40px 2rem; }
+        .menu-category-section { margin-bottom: 60px; }
+        .menu-category-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--green); margin-bottom: 35px; padding-bottom: 12px; border-bottom: 3px solid var(--green); display: inline-block; }
+        .menu-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+        .menu-food-card { background: var(--green-card); border-radius: var(--radius-lg); overflow: hidden; border: 2px solid #e0f0e3; transition: var(--transition); cursor: pointer; box-shadow: var(--shadow); }
+        .menu-food-card:hover { border-color: var(--green); transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .menu-food-img-wrapper { position: relative; width: 100%; height: 230px; overflow: hidden; background: #e8f3ea; }
+        .menu-food-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .menu-food-card:hover .menu-food-img { transform: scale(1.06); }
+        .menu-price-tag { position: absolute; top: 15px; right: 15px; background: var(--green); color: white; padding: 8px 18px; border-radius: 25px; font-weight: 700; font-size: 1rem; box-shadow: var(--shadow-green); }
+        .menu-special-tag { position: absolute; top: 15px; left: 15px; background: var(--gold); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; }
+        .menu-food-body { padding: 20px; }
+        .menu-food-body h3 { font-size: 1.15rem; color: var(--text-dark); margin-bottom: 8px; }
+        .menu-food-body p { font-size: 0.85rem; color: var(--gray); line-height: 1.5; margin-bottom: 12px; }
+        .menu-food-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid #e0f0e3; }
+        .menu-category-label { font-size: 0.75rem; color: var(--green); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        .menu-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
+        .menu-modal.active { display: flex; }
+        .menu-modal-box { background: #fff; border-radius: var(--radius-lg); max-width: 500px; width: 90%; overflow: hidden; border: 2px solid var(--green); }
+        .menu-modal-box img { width: 100%; height: 300px; object-fit: cover; }
+        .menu-modal-content { padding: 25px; }
+        .menu-modal-content h2 { color: var(--green); margin-bottom: 10px; }
+        .menu-modal-content p { color: var(--gray); line-height: 1.7; margin-bottom: 15px; }
+        .menu-modal-price { font-size: 1.5rem; color: var(--green); font-weight: 700; }
+        .menu-modal-close { float: right; font-size: 28px; cursor: pointer; color: var(--green); background: none; border: none; padding: 10px; }
+
+        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 30px; }
+        .payment-card { background: #fff; border-radius: var(--radius-lg); padding: 28px; text-align: center; border: 2px solid #e0f0e3; transition: var(--transition); }
+        .payment-card:hover { border-color: var(--green); transform: translateY(-4px); }
+        .payment-card i { font-size: 2.2rem; color: var(--green); margin-bottom: 12px; display: block; }
+        .payment-card h4 { color: var(--text-dark); font-size: 1.1rem; }
+        .payment-detail { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--green); font-weight: 700; }
+
+        .footer { background: var(--text-dark); color: #aaa; padding: 3rem 2rem 2rem; }
+        .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px; margin-bottom: 30px; }
+        .footer-col h4 { font-size: 1rem; color: #fff; margin-bottom: 16px; font-weight: 600; }
+        .footer-col p, .footer-col a { display: block; color: #aaa; font-size: 0.85rem; line-height: 1.8; text-decoration: none; transition: var(--transition); }
+        .footer-col a:hover { color: var(--green-light); padding-left: 4px; }
+        .footer-bottom { max-width: 1300px; margin: 0 auto; text-align: center; padding-top: 25px; border-top: 1px solid #333; font-size: 0.82rem; color: #777; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: #fff; text-decoration: none; z-index: 999; box-shadow: 0 6px 25px rgba(37,211,102,0.4); transition: var(--transition); animation: pulse 2.5s infinite; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        @media (max-width: 768px) { .menu-page-hero h1 { font-size: 2.5rem; } .menu-items-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
 
-<div class="cursor-glow"></div>
-<div class="page-transition"></div>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/251900000000?text=Hello%20LA%20LUNA%2C%20I%20would%20like%20to%20make%20a%20reservation" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">Order on WhatsApp</span>
-</a>
-
-<!-- Mobile Sidebar -->
-<div class="mobile-sidebar" id="mobileSidebar">
-    <div class="sidebar-header">
-        <h3>🇮🇹 LA LUNA</h3>
-        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="sidebar-nav">
-        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
-        <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
-        <a href="contact.html"><i class="fas fa-map-pin"></i> Contact</a>
-    </div>
-    <div class="sidebar-footer">
-        <p><i class="fas fa-phone-alt"></i> +251 900 000 000</p>
-        <p><i class="fas fa-envelope"></i> info@laluna.com</p>
-        <p><i class="fas fa-location-dot"></i> Addis Ababa, Ethiopia</p>
-    </div>
+<div class="topbar">
+    <div><i class="fas fa-clock"></i> Open Daily: <span>7:00 AM - 11:00 PM</span></div>
+    <div><i class="fas fa-map-marker-alt"></i> <span>Addis Ababa, Ethiopia</span></div>
+    <div><i class="fas fa-phone"></i> <span>+251 952 253 333</span></div>
 </div>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Header -->
-<header class="main-header">
-    <div class="container">
-        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-        <div class="logo">
-            <a href="index.html">
-                <h1>🇮🇹 LA LUNA</h1>
-                <span>Italian Cuisine</span>
-            </a>
-        </div>
-        <nav class="desktop-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a href="contact.html" class="btn-reserve">Reserve a Table</a>
+<header class="nav-bar">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=100&h=100&fit=crop&crop=center" alt="La Luna Logo" class="logo-img">
+            <div class="logo-text">LA LUNA<span>ITALIAN CUISINE</span></div>
+        </a>
+        <button class="mobile-menu-btn" id="simpleMenuBtn"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta-btn">Reserve a Table</a></li>
+        </ul>
     </div>
 </header>
 
-<main>
-    <!-- Hero Section with Parallax -->
-    <section class="hero" data-aos="fade-up">
-        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=1080&fit=crop');"></div>
-        <div class="hero-overlay-dark"></div>
-        <div class="container hero-content">
-            <span class="hero-subtitle" data-aos="fade-up">Welcome to</span>
-            <h1 data-aos="fade-up" data-aos-delay="100">LA LUNA <span class="highlight">Italian Cuisine</span> 🇮🇹</h1>
-            <p data-aos="fade-up" data-aos-delay="200">Experience authentic Italian flavors in the heart of Addis Ababa</p>
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-                <a href="menu.html" class="hero-btn">Explore Menu →</a>
-                <a href="contact.html" class="hero-btn-secondary">Reserve Table</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-nav-panel" id="mobileNavPanel">
+    <button class="close-btn" id="closeMenuBtn">✕</button>
+    <a href="index.html">🏠 Home</a>
+    <a href="menu.html" class="active">🍽️ Menu</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="contact.html" style="background:#009246;text-align:center;border-radius:25px;margin-top:20px;padding:12px;color:white;">🍽️ Reserve a Table</a>
+</div>
 
-    <!-- Features -->
-    <section class="features-section" data-aos="fade-up">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card" data-aos="flip-left">
-                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Authentic Italian</h3>
-                    <p>Traditional recipes from Italy</p>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="feature-icon"><i class="fas fa-wine-glass-alt"></i></div>
-                    <h3>Fine Wine Selection</h3>
-                    <p>Curated wine list</p>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="feature-icon"><i class="fas fa-music"></i></div>
-                    <h3>Live Music</h3>
-                    <p>Every Friday & Saturday</p>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="feature-icon"><i class="fas fa-crown"></i></div>
-                    <h3>Premium Service</h3>
-                    <p>Fine dining experience</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="menu-page-hero">
+    <h1>Our Menu</h1>
+    <p>Fresh ingredients • Authentic Italian & Ethiopian flavors • 130+ items</p>
+</section>
 
-    <!-- Signature Dishes -->
-    <section class="container" data-aos="fade-up">
-        <h2 class="section-title">Signature <span class="gold">Dishes</span></h2>
-        <div class="signature-grid">
-            <div class="signature-card">
-                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=400&fit=crop" alt="Pasta">
-                <div class="signature-overlay">
-                    <h3>Pasta Carbonara</h3>
-                    <p>Traditional Roman pasta</p>
-                </div>
-            </div>
-            <div class="signature-card">
-                <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=400&h=400&fit=crop" alt="Pizza">
-                <div class="signature-overlay">
-                    <h3>Pizza Margherita</h3>
-                    <p>Classic Italian pizza</p>
-                </div>
-            </div>
-            <div class="signature-card">
-                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=400&fit=crop" alt="Tiramisu">
-                <div class="signature-overlay">
-                    <h3>Tiramisu</h3>
-                    <p>Homemade Italian dessert</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav class="menu-category-nav" id="categoryNav">
+    <button class="menu-cat-btn active" onclick="filterMenu('all')">All</button>
+</nav>
 
-    <!-- CTA Section -->
-    <section class="cta-section" data-aos="zoom-in">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Book Your Table</h2>
-                <p>Experience the taste of Italy in Addis Ababa</p>
-                <a href="contact.html" class="cta-btn">Reserve Now →</a>
-            </div>
-        </div>
-    </section>
+<main class="menu-container">
+    <div id="menuContent"></div>
 </main>
 
-<!-- Footer -->
-<footer class="main-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">🇮🇹 LA LUNA</div>
-                <p class="tagline">Italian Cuisine</p>
-                <p>Authentic Italian Dining<br>Addis Ababa, Ethiopia</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Hours</h4>
-                <ul>
-                    <li>Mon-Sat: 11am - 11pm</li>
-                    <li>Sunday: 12pm - 10pm</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +251 900 000 000</li>
-                    <li><i class="fab fa-instagram"></i> @laluna</li>
-                </ul>
-            </div>
+<div class="menu-container">
+    <section style="padding: 40px 0 60px; text-align: center;">
+        <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--green);margin-bottom:30px;">Payment Methods</h2>
+        <div class="payment-grid">
+            <div class="payment-card"><i class="fas fa-mobile-alt"></i><h4>Telebirr</h4><div class="payment-detail">09XX XXX XXX</div></div>
+            <div class="payment-card"><i class="fas fa-university"></i><h4>Awash Bank</h4><div class="payment-detail">013041709689600</div></div>
+            <div class="payment-card"><i class="fas fa-cash-register"></i><h4>Cash</h4><div class="payment-detail">Available</div></div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 LA LUNA — Authentic Italian Cuisine 🇮🇹</p>
+    </section>
+</div>
+
+<div class="menu-modal" id="itemModal">
+    <div class="menu-modal-box">
+        <button class="menu-modal-close" onclick="closeModal()">&times;</button>
+        <img id="modalImg" src="" alt="">
+        <div class="menu-modal-content">
+            <h2 id="modalName"></h2>
+            <p id="modalDesc"></p>
+            <span class="menu-modal-price" id="modalPrice"></span>
         </div>
     </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col"><h4>La Luna Italian Cuisine</h4><p>Premium Italian dining with Ethiopian favorites.</p></div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p><p><i class="fas fa-phone"></i> +251 952 253 333</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 La Luna Italian Cuisine. All rights reserved.</p></div>
 </footer>
 
-<div id="toastMsg" class="toast-msg">✓ Added</div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
+<a href="https://wa.me/251952253333" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
 <script>
-    AOS.init({ duration: 800, once: true, offset: 100 });
-    
-    // Custom cursor glow
-    document.addEventListener('mousemove', function(e) {
-        const glow = document.querySelector('.cursor-glow');
-        if (glow) {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
+    const laLunaMenu = [
+        { category: "🍰 PASTRY", items: [
+            { name: "Oreo Cheese Cake", desc: "Creamy cheesecake with Oreo crust and chunks", price: 390, img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80", feat: true },
+            { name: "Baked Cheese Cake", desc: "Classic baked cheesecake, smooth and creamy", price: 370, img: "https://images.unsplash.com/photo-1524351199678-5a7cfdb5dd0a?w=600&q=80", feat: false },
+            { name: "Cold Cheese Cake", desc: "No-bake refrigerated cheesecake, light texture", price: 360, img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80", feat: false },
+            { name: "Strawberry Mousse Cake", desc: "Light strawberry mousse on sponge base", price: 320, img: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80", feat: true },
+            { name: "Chocolate Mousse Cake", desc: "Decadent dark chocolate mousse", price: 350, img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80", feat: false },
+            { name: "Red Velvet Cake", desc: "Classic red velvet with cream cheese frosting", price: 320, img: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&q=80", feat: false },
+            { name: "Tiramisu Cake", desc: "Coffee-soaked ladyfingers with mascarpone", price: 300, img: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80", feat: true },
+            { name: "Milfoni Cake", desc: "Layered puff pastry with cream filling", price: 280, img: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80", feat: false },
+            { name: "Custard Cake", desc: "Vanilla custard filled sponge cake", price: 250, img: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80", feat: false },
+            { name: "Triple Chocolate", desc: "Dark, milk, white chocolate layers", price: 320, img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80", feat: false }
+        ]},
+        { category: "🎂 TORTA (Whole)", items: [
+            { name: "Oreo Cheese Cake (Whole)", desc: "Full size Oreo cheesecake", price: 3900, img: "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=600&q=80", feat: true },
+            { name: "Baked Cheese Cake (Whole)", desc: "Full size baked cheesecake", price: 3700, img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80", feat: false },
+            { name: "Red Velvet Cake (Whole)", desc: "Full size red velvet cake", price: 3200, img: "https://images.unsplash.com/photo-1616690710400-a16d146927c5?w=600&q=80", feat: false },
+            { name: "Tiramisu Cake (Whole)", desc: "Full size tiramisu", price: 3000, img: "https://images.unsplash.com/photo-1559305615-16b3e5d88f1a?w=600&q=80", feat: false }
+        ]},
+        { category: "🍖 NATIONAL CORNER", items: [
+            { name: "Chikina Tibes", desc: "Beef fillet with Ethiopian spices, injera", price: 1080, img: "https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=600&q=80", feat: true },
+            { name: "Doro Tibes", desc: "Spicy chicken breast, onion, tomato, injera", price: 1120, img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&q=80", feat: false },
+            { name: "Bozoma Shiro", desc: "Small dice beef, shiro wot, injera roll", price: 650, img: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=600&q=80", feat: false }
+        ]},
+        { category: "🐟 FISH CORNER", items: [
+            { name: "Grilled Nile Perch", desc: "Lemon butter, mashed potato, vegetables", price: 1200, img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80", feat: true },
+            { name: "Grilled Salmon", desc: "Lemon coriander, mashed potato, rice", price: 2000, img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80", feat: false },
+            { name: "Shrimps", desc: "Lemon coriander shrimps, mashed potato", price: 2000, img: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=600&q=80", feat: false }
+        ]},
+        { category: "🍗 POULTRY CORNER", items: [
+            { name: "Roasted Chicken Leg", desc: "Marinated, rice and steamed vegetables", price: 1550, img: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80", feat: false },
+            { name: "Grilled Chicken Breast", desc: "Rice and steamed vegetables", price: 1920, img: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600&q=80", feat: false },
+            { name: "Chicken Wings", desc: "Spicy ginger sauce, rice, vegetables", price: 1200, img: "https://images.unsplash.com/photo-1527477396000-e27163b481c3?w=600&q=80", feat: true }
+        ]},
+        { category: "🥩 BEEF CORNER", items: [
+            { name: "Beef Marine Steak", desc: "Red wine sauce, spinach, roasted potato", price: 1590, img: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80", feat: true },
+            { name: "Pepper Steak", desc: "Pepper sauce, mixed vegetables", price: 1450, img: "https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80", feat: false }
+        ]},
+        { category: "🍕 PIZZA CORNER", items: [
+            { name: "La Luna Special Pizza", desc: "Beef, chicken, mortadella, egg, olives", price: 1630, img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80", feat: true },
+            { name: "Margarita Pizza", desc: "Tomato sauce, mozzarella, basil", price: 780, img: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80", feat: false },
+            { name: "Pepperoni Pizza", desc: "Beef pepperoni, mozzarella", price: 970, img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80", feat: false }
+        ]},
+        { category: "🍝 PASTA & SAUCES", items: [
+            { name: "Tagliatelle Chicken Alfredo", desc: "Creamy Alfredo with chicken", price: 1600, img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80", feat: true },
+            { name: "Spaghetti Bolognese", desc: "Classic meat sauce", price: 970, img: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80", feat: false },
+            { name: "Lasagna", desc: "Layered pasta, meat sauce, béchamel", price: 1020, img: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&q=80", feat: false }
+        ]},
+        { category: "☕ TEA & COFFEE", items: [
+            { name: "Cappuccino", desc: "Espresso with steamed milk and foam", price: 200, img: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80", feat: false },
+            { name: "Caramel Macchiato", desc: "Macchiato with caramel syrup", price: 200, img: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80", feat: false },
+            { name: "Hot Chocolate", desc: "Rich hot cocoa", price: 250, img: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&q=80", feat: false }
+        ]}
+    ];
+
+    function buildCategoryNav() {
+        const nav = document.getElementById('categoryNav');
+        nav.innerHTML = '<button class="menu-cat-btn active" onclick="filterMenu(\'all\')">All</button>';
+        laLunaMenu.forEach(cat => { if(cat.items.length) nav.innerHTML += `<button class="menu-cat-btn" onclick="filterMenu('${cat.category}')">${cat.category}</button>`; });
+    }
+
+    function filterMenu(cat) {
+        document.querySelectorAll('.menu-cat-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        renderMenu(cat);
+    }
+
+    function renderMenu(category) {
+        const content = document.getElementById('menuContent');
+        content.innerHTML = '';
+        const cats = category === 'all' ? laLunaMenu : laLunaMenu.filter(c => c.category === category);
+        cats.forEach(cat => {
+            if(!cat.items.length) return;
+            const section = document.createElement('div');
+            section.className = 'menu-category-section';
+            section.innerHTML = `<div style="text-align:center;"><h2 class="menu-category-title">${cat.category}</h2></div>`;
+            const grid = document.createElement('div');
+            grid.className = 'menu-items-grid';
+            cat.items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'menu-food-card';
+                card.onclick = () => showModal(item);
+                card.innerHTML = `<div class="menu-food-img-wrapper"><img class="menu-food-img" src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80'"><span class="menu-price-tag">${item.price} ETB</span>${item.feat ? '<span class="menu-special-tag">✦ SPECIAL</span>' : ''}</div><div class="menu-food-body"><h3>${item.name}</h3><p>${item.desc}</p></div>`;
+                grid.appendChild(card);
+            });
+            section.appendChild(grid);
+            content.appendChild(section);
+        });
+    }
+
+    function showModal(item) {
+        document.getElementById('modalImg').src = item.img;
+        document.getElementById('modalName').textContent = item.name;
+        document.getElementById('modalDesc').textContent = item.desc;
+        document.getElementById('modalPrice').textContent = item.price + ' ETB';
+        document.getElementById('itemModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() { document.getElementById('itemModal').classList.remove('active'); document.body.style.overflow = ''; }
+    document.getElementById('itemModal').addEventListener('click', function(e) { if(e.target === this) closeModal(); });
+
+    (function() {
+        function init() {
+            const b = document.getElementById('simpleMenuBtn'), p = document.getElementById('mobileNavPanel'), o = document.getElementById('mobileOverlay'), c = document.getElementById('closeMenuBtn');
+            if(!b) { setTimeout(init, 100); return; }
+            function open() { p.classList.add('open'); o.classList.add('show'); document.body.style.overflow = 'hidden'; }
+            function close() { p.classList.remove('open'); o.classList.remove('show'); document.body.style.overflow = ''; }
+            b.onclick = function(e) { e.preventDefault(); open(); };
+            if(c) c.onclick = function(e) { e.preventDefault(); close(); };
+            o.onclick = function() { close(); };
+            var ls = p.querySelectorAll('a'); for(var i=0;i<ls.length;i++) ls[i].onclick=function(){close();};
+            document.onkeydown = function(e) { if(e.key==='Escape'&&p.classList.contains('open')) close(); };
         }
-    });
+        document.readyState==='loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+    })();
+
+    buildCategoryNav();
+    renderMenu('all');
 </script>
 </body>
 </html>
