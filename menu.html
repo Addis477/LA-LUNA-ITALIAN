@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="LA LUNA Menu - Authentic Italian Cuisine. Premium pasta, pizza, seafood, and traditional Italian dishes.">
+    <meta name="theme-color" content="#1A1A1A">
     <title>Menu | LA LUNA | Italian Cuisine</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,7 +16,10 @@
 <div class="cursor-glow"></div>
 <div class="page-transition"></div>
 
-<a href="https://wa.me/251900000000" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="whatsapp-tooltip">Order on WhatsApp</span></a>
+<a href="https://wa.me/251900000000?text=Hello%20LA%20LUNA%2C%20I%20would%20like%20to%20place%20an%20order" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Order on WhatsApp</span>
+</a>
 
 <div class="mobile-sidebar" id="mobileSidebar">
     <div class="sidebar-header"><h3>🇮🇹 LA LUNA</h3><button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button></div>
@@ -41,41 +46,90 @@
 </header>
 
 <main>
-    <section class="hero-small">
-        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=400&fit=crop');"></div>
-        <div class="hero-overlay-dark"></div>
-        <div class="container hero-content-small">
+    <!-- Hero Section - BRIGHTER -->
+    <section class="hero-menu">
+        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=1920&h=500&fit=crop');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content-menu">
+            <span class="hero-subtitle">La Luna</span>
             <h1>Our <span class="gold">Menu</span></h1>
             <p>Authentic Italian flavors crafted with passion</p>
         </div>
     </section>
 
-    <section class="container">
-        <!-- Category Navigation -->
-        <div class="menu-category-nav">
-            <button class="menu-cat-btn active" data-cat="all">🍽️ All</button>
-            <button class="menu-cat-btn" data-cat="pastry">🍰 Pastry</button>
-            <button class="menu-cat-btn" data-cat="torta">🎂 Torta (Whole Cake)</button>
-            <button class="menu-cat-btn" data-cat="national">🍖 National Corner</button>
-            <button class="menu-cat-btn" data-cat="fish">🐟 Fish Corner</button>
-            <button class="menu-cat-btn" data-cat="poultry">🍗 Poultry Corner</button>
-            <button class="menu-cat-btn" data-cat="beef">🥩 Beef Corner</button>
-            <button class="menu-cat-btn" data-cat="salad">🥗 Salad</button>
-            <button class="menu-cat-btn" data-cat="sandwich">🥪 Sandwich & Burger</button>
-            <button class="menu-cat-btn" data-cat="pizza">🍕 Pizza</button>
-            <button class="menu-cat-btn" data-cat="breakfast">🍳 Breakfast</button>
-            <button class="menu-cat-btn" data-cat="soup">🥣 Soup</button>
-            <button class="menu-cat-btn" data-cat="pasta">🍝 Pasta & Sauces</button>
-            <button class="menu-cat-btn" data-cat="farina">🍝 Farinaceous Food</button>
-            <button class="menu-cat-btn" data-cat="tea">☕ Tea & Coffee</button>
-            <button class="menu-cat-btn" data-cat="latte">🥛 Latte</button>
-            <button class="menu-cat-btn" data-cat="ice">🧊 Ice Drinks</button>
+    <!-- Category Navigation - ENHANCED LIKE ELEGANT TABS -->
+    <div class="category-nav-wrapper">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="cat-tab active" data-cat="all">
+                    <i class="fas fa-utensils"></i>
+                    <span>All</span>
+                </button>
+                <button class="cat-tab" data-cat="pastry">
+                    <i class="fas fa-cake"></i>
+                    <span>Pastry</span>
+                </button>
+                <button class="cat-tab" data-cat="torta">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Whole Cakes</span>
+                </button>
+                <button class="cat-tab" data-cat="national">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>National</span>
+                </button>
+                <button class="cat-tab" data-cat="fish">
+                    <i class="fas fa-fish"></i>
+                    <span>Fish</span>
+                </button>
+                <button class="cat-tab" data-cat="poultry">
+                    <i class="fas fa-drumstick"></i>
+                    <span>Poultry</span>
+                </button>
+                <button class="cat-tab" data-cat="beef">
+                    <i class="fas fa-utensil-spoon"></i>
+                    <span>Beef</span>
+                </button>
+                <button class="cat-tab" data-cat="salad">
+                    <i class="fas fa-leaf"></i>
+                    <span>Salad</span>
+                </button>
+                <button class="cat-tab" data-cat="sandwich">
+                    <i class="fas fa-hamburger"></i>
+                    <span>Sandwiches</span>
+                </button>
+                <button class="cat-tab" data-cat="pizza">
+                    <i class="fas fa-pizza-slice"></i>
+                    <span>Pizza</span>
+                </button>
+                <button class="cat-tab" data-cat="breakfast">
+                    <i class="fas fa-sun"></i>
+                    <span>Breakfast</span>
+                </button>
+                <button class="cat-tab" data-cat="soup">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Soup</span>
+                </button>
+                <button class="cat-tab" data-cat="pasta">
+                    <i class="fas fa-utensils"></i>
+                    <span>Pasta</span>
+                </button>
+                <button class="cat-tab" data-cat="tea">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Coffee & Tea</span>
+                </button>
+                <button class="cat-tab" data-cat="ice">
+                    <i class="fas fa-ice-cream"></i>
+                    <span>Ice Drinks</span>
+                </button>
+            </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="menu-sections">
             <!-- PASTRY -->
             <div class="menu-category" data-cat="pastry">
-                <div class="menu-category-header"><i class="fas fa-cake"></i><h2>Pastry</h2></div>
+                <div class="menu-category-header"><i class="fas fa-cake"></i><h2>Pastry</h2><span class="item-count">22 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Oreo Cheese Cake</span><span>ETB 390</span></div>
                     <div class="menu-item"><span>Baked Cheese Cake</span><span>ETB 370</span></div>
@@ -104,7 +158,7 @@
 
             <!-- TORTA (Whole Cake) -->
             <div class="menu-category" data-cat="torta">
-                <div class="menu-category-header"><i class="fas fa-birthday-cake"></i><h2>Torta (Whole Cake)</h2></div>
+                <div class="menu-category-header"><i class="fas fa-birthday-cake"></i><h2>Torta (Whole Cake)</h2><span class="item-count">13 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Oreo Cheese Cake</span><span>ETB 3,900</span></div>
                     <div class="menu-item"><span>Baked Cheese Cake</span><span>ETB 3,700</span></div>
@@ -124,7 +178,7 @@
 
             <!-- NATIONAL CORNER -->
             <div class="menu-category" data-cat="national">
-                <div class="menu-category-header"><i class="fas fa-drumstick-bite"></i><h2>National Corner</h2></div>
+                <div class="menu-category-header"><i class="fas fa-drumstick-bite"></i><h2>National Corner</h2><span class="item-count">7 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Chikina Tibes - Beef fillet with Ethiopian spices</span><span>ETB 1,080</span></div>
                     <div class="menu-item"><span>Tegabino - Ethiopian flavored chickpeas powder</span><span>ETB 550</span></div>
@@ -138,7 +192,7 @@
 
             <!-- FISH CORNER -->
             <div class="menu-category" data-cat="fish">
-                <div class="menu-category-header"><i class="fas fa-fish"></i><h2>Fish Corner</h2></div>
+                <div class="menu-category-header"><i class="fas fa-fish"></i><h2>Fish Corner</h2><span class="item-count">5 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Grilled Nile Perch - Lemon butter sauce</span><span>ETB 1,200</span></div>
                     <div class="menu-item"><span>Fish Goulash - Crispy Nile perch</span><span>ETB 900</span></div>
@@ -150,7 +204,7 @@
 
             <!-- POULTRY CORNER -->
             <div class="menu-category" data-cat="poultry">
-                <div class="menu-category-header"><i class="fas fa-drumstick"></i><h2>Poultry Corner</h2></div>
+                <div class="menu-category-header"><i class="fas fa-drumstick"></i><h2>Poultry Corner</h2><span class="item-count">5 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Roasted Chicken Leg</span><span>ETB 1,550</span></div>
                     <div class="menu-item"><span>Grilled Chicken Breast</span><span>ETB 1,920</span></div>
@@ -162,7 +216,7 @@
 
             <!-- BEEF CORNER -->
             <div class="menu-category" data-cat="beef">
-                <div class="menu-category-header"><i class="fas fa-utensil-spoon"></i><h2>Beef Corner</h2></div>
+                <div class="menu-category-header"><i class="fas fa-utensil-spoon"></i><h2>Beef Corner</h2><span class="item-count">4 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Beef Marine steak - red wine sauce</span><span>ETB 1,590</span></div>
                     <div class="menu-item"><span>Pepper steak - pepper sauce</span><span>ETB 1,450</span></div>
@@ -173,7 +227,7 @@
 
             <!-- SALAD -->
             <div class="menu-category" data-cat="salad">
-                <div class="menu-category-header"><i class="fas fa-leaf"></i><h2>Salad</h2></div>
+                <div class="menu-category-header"><i class="fas fa-leaf"></i><h2>Salad</h2><span class="item-count">4 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Fruity Mixed Salad</span><span>ETB 840</span></div>
                     <div class="menu-item"><span>Greek Salad</span><span>ETB 1,580</span></div>
@@ -184,7 +238,7 @@
 
             <!-- SANDWICH AND BURGER -->
             <div class="menu-category" data-cat="sandwich">
-                <div class="menu-category-header"><i class="fas fa-hamburger"></i><h2>Sandwich & Burger</h2></div>
+                <div class="menu-category-header"><i class="fas fa-hamburger"></i><h2>Sandwich & Burger</h2><span class="item-count">8 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Chicken sandwich with cheese</span><span>ETB 900</span></div>
                     <div class="menu-item"><span>Tuna sandwich</span><span>ETB 840</span></div>
@@ -199,7 +253,7 @@
 
             <!-- PIZZA -->
             <div class="menu-category" data-cat="pizza">
-                <div class="menu-category-header"><i class="fas fa-pizza-slice"></i><h2>Pizza Corner</h2></div>
+                <div class="menu-category-header"><i class="fas fa-pizza-slice"></i><h2>Pizza Corner</h2><span class="item-count">7 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>La Luna special pizza</span><span>ETB 1,630</span></div>
                     <div class="menu-item"><span>Alatuna Pizza</span><span>ETB 1,100</span></div>
@@ -213,7 +267,7 @@
 
             <!-- BREAKFAST -->
             <div class="menu-category" data-cat="breakfast">
-                <div class="menu-category-header"><i class="fas fa-sun"></i><h2>Breakfast</h2></div>
+                <div class="menu-category-header"><i class="fas fa-sun"></i><h2>Breakfast</h2><span class="item-count">12 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Fasting Fritt</span><span>ETB 430</span></div>
                     <div class="menu-item"><span>Spanish omelet</span><span>ETB 540</span></div>
@@ -232,7 +286,7 @@
 
             <!-- SOUP -->
             <div class="menu-category" data-cat="soup">
-                <div class="menu-category-header"><i class="fas fa-thermometer-half"></i><h2>Soup</h2></div>
+                <div class="menu-category-header"><i class="fas fa-thermometer-half"></i><h2>Soup</h2><span class="item-count">5 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Carrot ginger soup</span><span>ETB 530</span></div>
                     <div class="menu-item"><span>Chicken noodle soup</span><span>ETB 910</span></div>
@@ -244,7 +298,7 @@
 
             <!-- PASTA -->
             <div class="menu-category" data-cat="pasta">
-                <div class="menu-category-header"><i class="fas fa-utensils"></i><h2>Pasta & Sauces</h2></div>
+                <div class="menu-category-header"><i class="fas fa-utensils"></i><h2>Pasta & Sauces</h2><span class="item-count">6 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Carbonara sauce</span><span>ETB 890</span></div>
                     <div class="menu-item"><span>Tagliatelle with tomato</span><span>ETB 650</span></div>
@@ -257,7 +311,7 @@
 
             <!-- FARINACEOUS FOOD -->
             <div class="menu-category" data-cat="farina">
-                <div class="menu-category-header"><i class="fas fa-utensils"></i><h2>Farinaceous Food</h2></div>
+                <div class="menu-category-header"><i class="fas fa-utensils"></i><h2>Farinaceous Food</h2><span class="item-count">4 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Spaghetti/Penne with Tomato</span><span>ETB 630</span></div>
                     <div class="menu-item"><span>Spaghetti Rice with Vegetable</span><span>ETB 700</span></div>
@@ -268,7 +322,7 @@
 
             <!-- TEA & COFFEE -->
             <div class="menu-category" data-cat="tea">
-                <div class="menu-category-header"><i class="fas fa-mug-hot"></i><h2>Tea & Coffee</h2></div>
+                <div class="menu-category-header"><i class="fas fa-mug-hot"></i><h2>Tea & Coffee</h2><span class="item-count">28 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Ginger Tea</span><span>ETB 150</span></div>
                     <div class="menu-item"><span>Flavor Tea</span><span>ETB 100</span></div>
@@ -301,19 +355,9 @@
                 </div>
             </div>
 
-            <!-- LATTE -->
-            <div class="menu-category" data-cat="latte">
-                <div class="menu-category-header"><i class="fas fa-coffee"></i><h2>Latte</h2></div>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>Caffe latte</span><span>ETB 200</span></div>
-                    <div class="menu-item"><span>Flat white latte</span><span>ETB 200</span></div>
-                    <div class="menu-item"><span>Special latte</span><span>ETB 240</span></div>
-                </div>
-            </div>
-
             <!-- ICE DRINKS -->
             <div class="menu-category" data-cat="ice">
-                <div class="menu-category-header"><i class="fas fa-ice-cream"></i><h2>Ice Drinks</h2></div>
+                <div class="menu-category-header"><i class="fas fa-ice-cream"></i><h2>Ice Drinks</h2><span class="item-count">5 items</span></div>
                 <div class="menu-items-grid">
                     <div class="menu-item"><span>Ice Latte</span><span>ETB 200</span></div>
                     <div class="menu-item"><span>Ice coffee</span><span>ETB 250</span></div>
@@ -337,7 +381,7 @@
                 <p>We accept Telebirr, Nigd Bank transfer, and cash on delivery</p>
             </div>
         </div>
-    </section>
+    </div>
 </main>
 
 <footer class="main-footer">
@@ -357,13 +401,22 @@
 <script>
     AOS.init({ duration: 800, once: true });
     
-    document.querySelectorAll('.menu-cat-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.menu-cat-btn').forEach(b => b.classList.remove('active'));
+    // Enhanced Category Filter
+    const catTabs = document.querySelectorAll('.cat-tab');
+    const menuCategories = document.querySelectorAll('.menu-category');
+    
+    catTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            catTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
             const cat = this.getAttribute('data-cat');
-            document.querySelectorAll('.menu-category').forEach(category => {
-                category.style.display = (cat === 'all' || category.getAttribute('data-cat') === cat) ? 'block' : 'none';
+            menuCategories.forEach(category => {
+                if (cat === 'all' || category.getAttribute('data-cat') === cat) {
+                    category.style.display = 'block';
+                    category.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    category.style.display = 'none';
+                }
             });
         });
     });
